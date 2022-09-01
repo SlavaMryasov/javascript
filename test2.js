@@ -140,7 +140,7 @@
 
 // const myCity = {
 //   city: 'kazan',
-//   cityGreeting: () {             //сокращено без function
+//   cityGreeting: () {             //сокращено, без function
 //     console.log('Greetings!!!')
 //   }
 // }
@@ -161,6 +161,19 @@
 
 // console.log(JSON.stringify(a))
 
-const b = '{"userId":1,"id":1,"title":"Test title","status":{"completed":false}}'
-console.log(JSON.parse(b))
+
+
+// const b = '{"userId":1,"id":1,"title":"Test title","status":{"completed":false}}'
+// console.log(JSON.parse(b))
+
+
+const post = {
+  title: 'My post',
+  likesQty: 5
+}
+
+const postStringify = JSON.stringify(post) // присвоили переменной результат конвертации объекта в строку
+console.log(postStringify)                // вывели переменную, значение которого строка 
+console.log(JSON.parse(postStringify))    // конвертировали строку в объект JS и вывели в консоль 
+
 
