@@ -167,13 +167,33 @@
 // console.log(JSON.parse(b))
 
 
-const post = {
-  title: 'My post',
-  likesQty: 5
+
+// const post = {
+//   title: 'My post',
+//   likesQty: 5
+// }
+
+// const postStringify = JSON.stringify(post) // присвоили переменной результат конвертации объекта в строку
+// console.log(postStringify)                // вывели переменную, значение которого строка 
+// console.log(JSON.parse(postStringify))    // конвертировали строку в объект JS и вывели в консоль 
+
+
+//1010101010101010101010 копирование примитивов и ссылочного типа
+
+// const a = 10
+// let b = a
+// b = 30
+
+// console.log(a) // 10
+// console.log(b) // 30
+
+const person = {
+  name: 'slava',
+  age: 25
 }
 
-const postStringify = JSON.stringify(post) // присвоили переменной результат конвертации объекта в строку
-console.log(postStringify)                // вывели переменную, значение которого строка 
-console.log(JSON.parse(postStringify))    // конвертировали строку в объект JS и вывели в консоль 
+person.age = 11
+person.isAdult = true
 
-
+console.log(person.age)  //22
+console.log(person.isAdult) // true
