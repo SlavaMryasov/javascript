@@ -1011,6 +1011,7 @@ function myFn(a, b) {
 const sum = myFn(2, 6)
 console.log(sum)
 
+f
 
 
 
