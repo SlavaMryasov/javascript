@@ -178,7 +178,7 @@
 // console.log(JSON.parse(postStringify))    // конвертировали строку в объект JS и вывели в консоль 
 
 
-//1010101010101010101010 копирование примитивов и ссылочного типа
+                        //10 копирование примитивов и ссылочного типа
 
 // const a = 10
 // let b = a
@@ -187,13 +187,130 @@
 // console.log(a) // 10
 // console.log(b) // 30
 
-const person = {
-  name: 'slava',
-  age: 25
-}
 
-person.age = 11
-person.isAdult = true
+// const person = {
+//   name: 'slava',
+//   age: 25
+// }
 
-console.log(person.age)  //22
-console.log(person.isAdult) // true
+// person.age = 11
+// person.isAdult = true
+
+// console.log(person.age)  //22
+// console.log(person.isAdult) // true
+
+
+
+// const person = {
+//   name: 'slava', 
+//   age: 25
+// }
+
+// const person2 = person
+
+// person2.age = 26
+// person2.isAdult = true
+
+// console.log(person.age)
+// console.log(person.isAdult)
+
+
+
+                                            //11 копирование ссылочного типа без мутаций
+
+////assign
+
+// const person = {
+//   name: 'slava',
+//   age: 25
+// }
+
+// const person2 = Object.assign({}, person) // в фигурных пустой объект(который создаем),после запятой 
+//                                           // объект, который копируем
+
+// person2.age = 22
+
+// console.log(person.age)
+// console.log(person2.age)
+
+
+// //spread
+
+// const person = {
+//   name: 'slava',
+//   age: 25
+// }
+
+// const person2 = {...person}
+
+// person2.name = 'alex'
+// console.log(person.name) // 'slava'
+// console.log(person2.name) // 'alex'
+
+
+//полностью избегаем мутации
+
+// const person = {
+//   name: 'slava',
+//   age: 25
+// }
+
+// const person2 = (JSON.parse(JSON.stringify(person)))
+// person2.name = 'alex'
+
+// console.log(person.name) // slava
+// console.log(person2.name) // alex
+
+
+
+                                          // 12 ФУНКЦИИ
+
+// let a = 5
+// let b = 3
+
+// let c
+
+// c = a + b
+// console.log(c)
+
+//  a = 8
+//  b = 12
+
+// c = a + b
+// console.log(c)
+
+
+// let a = 5
+// let b = 13
+
+// function sum(a, b) {
+//  const c = a + b
+//  console.log(c)
+// }
+
+// sum(a, b)
+
+
+
+// function myFn(a, b) {
+//   let c
+//   a = a + 1
+//   c = a + b
+//   return c  // возврат переменной c 
+// }
+
+// console.log(myFn.name) // получили имя функции
+// console.dir(myFn.name) // получили имя функции в свойстве name, объекта myFn
+
+
+
+//  function myFn(a, b) {
+//   let c
+//   a = a + 1 // увеличиваем a на 1
+//   c = a + b
+//   return c  
+// }
+// const sum = myFn(2, 6)    // присвоили результат вызова функции переменной
+// console.log(sum)         // вывели переменную которой присвоен результат функции 
+
+
