@@ -314,4 +314,48 @@
 // console.log(sum)         // вывели переменную которой присвоен результат функции 
 
 
-k
+
+                                                    //13 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ
+                                                    
+// const personeOne = {
+//     name: 'slava',
+//     age: 25
+// }
+
+// const personTwo = {
+//     name : 'alex',
+//     age: 55
+// }
+
+// function increasePersoneAge(person) {
+// person.age += 1  // можно ++
+// return person
+// }
+
+// increasePersoneAge(personeOne)
+// increasePersoneAge(personTwo)
+// console.log(personeOne.age, personTwo.age)
+
+// const counter = {
+//    meaning: 12 
+// }
+
+// function addition (plusOne) {
+//     plusOne.meaning ++
+// }
+
+// addition(counter)
+// console.log(counter)
+
+const personOne = {
+    name: 'slava',
+    age: 21
+  }                                      //пример
+  
+  function increasePersoneAge(person) {
+    person.age += 1
+    return person
+  }
+  
+  increasePersoneAge(personOne)
+  console.log(personOne.age)  // 22
