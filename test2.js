@@ -347,15 +347,35 @@
 // addition(counter)
 // console.log(counter)
 
+                                    //14 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ БЕЗ МУТАЦИИ
+
+// Написать функцию счетчик при вызове которой в первый раз будет ввыведен первй позьзователь с лайком 1
+// при втором вызове будет выведен второй пользователь с лайком 2 
+// const userOne = 'первый пользователь'
+// const userTwo = 'второй пользователь'
+
+// const userLike = {
+//   name : ' ',
+//   like : null
+// }
+
+// if (like)
+// function like(tap) {
+//   const 
+// }
+
+
 const personOne = {
-    name: 'slava',
-    age: 21
-  }                                      //пример
-  
-  function increasePersoneAge(person) {
-    person.age += 1
-    return person
-  }
-  
-  increasePersoneAge(personOne)
-  console.log(personOne.age)  // 22
+  name: 'slava',
+  age: 25
+}
+
+function agePlus(plusOne) {
+const plusOneYear = Object.assign({}, plusOne)
+plusOneYear.age ++
+return plusOneYear
+}
+
+const addedOneYear = agePlus(personOne)
+console.log(personOne.age)
+console.log(addedOneYear.age)

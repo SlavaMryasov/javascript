@@ -1040,6 +1040,26 @@ console.log(personOne.age)  // 22
 
 Внутри функции мы мутируем внешний объект. - НЕ РЕКОМЕНДУЕТСЯ
 
+----------------------------------------------------------------------------
+
+ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ БЕЗ МУТАЦИИ (практика  test2.js -14)
+
+const personOne = {
+  name: 'slava',
+  age: 25
+}
+
+function increasePersonAge(person) {
+  const updatePrson = Object.assign({}, person)
+  updatePrson ++
+  return updatePrson
+}
+
+const updatePersonOne = increasePersonAge(personOne)
+console.log(personOne)
+console.log(updatePersonOne)
+
+
 
 
 
