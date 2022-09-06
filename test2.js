@@ -365,17 +365,46 @@
 // }
 
 
-const personOne = {
-  name: 'slava',
-  age: 25
-}
 
-function agePlus(plusOne) {
-const plusOneYear = Object.assign({}, plusOne)
-plusOneYear.age ++
-return plusOneYear
-}
 
-const addedOneYear = agePlus(personOne)
-console.log(personOne.age)
-console.log(addedOneYear.age)
+
+// const personOne = {
+//   name: 'slava',
+//   age: 25
+// }
+
+// function agePlus(plusOne) {
+// const plusOneYear = Object.assign({}, plusOne)
+// plusOneYear.age ++
+// return plusOneYear
+// }
+
+// const addedOneYear = agePlus(personOne)
+// console.log(personOne.age)
+// console.log(addedOneYear.age)
+
+
+
+// const personOne = {
+//   name: 'slava',
+//   age: 25
+// }
+
+// function agePlusOne(agePlus) {
+//   const forFunction = Object.assign({}, agePlus)
+//   forFunction.age ++
+//   return forFunction
+// } 
+
+// const addAge = agePlusOne(personOne)
+// console.log(personOne)
+// console.log(addAge)
+
+
+                                          //15 КОЛБЭК ФУНКЦИИ
+
+  function myName()  {
+    console.log('matrix')
+  } 
+  
+  setTimeout(myName, 2000)

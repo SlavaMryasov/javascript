@@ -1061,8 +1061,40 @@ console.log(updatePersonOne)
 
 
 
+                                      КОЛБЭК ФУНКЦИИ  (практика  test2.js -15)     
+                                      
+ function anotherFunction() {
+  // Действия...
+ }              
+ 
+ function fnWithCallback(callbackFunction) {
+  callbackFunction()
+ }
+
+ fnWithCallback(anotherFunction)
 
 
+ Когда функция вызывает внутри себя другую функцию - это КОЛБЭК ФУНКЦИЯ
+
+ пример
+
+ function printMyName = {
+  console.log('slava')
+ }
+
+setTimeout(printMyName, 1000)
+
+Функция setTimeout встроена в JS, она доступна по умолчанию, как один из методов глобального объекта.
+
+1000 - время в миллисекундах
+
+
+
+ПРАВИЛА РАБОТЫ С ФУНКЦИЯМИ
+
+1. Называть функции исходя из выполняемых задач
+2. Одна функция должна выполнять одну задачу
+3. Не рекомендуется изменять внешние относительно функции переменные
 
 
 
