@@ -403,8 +403,40 @@
 
                                           //15 КОЛБЭК ФУНКЦИИ
 
-  function myName()  {
-    console.log('matrix')
-  } 
+  // function myName()  {
+  //   console.log('matrix')
+  // } 
   
-  setTimeout(myName, 2000)
+  // setTimeout(myName, 2000)
+
+
+//   function myName(name, fam) {
+//   let c = name + fam
+//   console.log(c)
+//   }
+//  function printMyName(myName) {
+//   console.log('это мое имя')
+//   myName()
+//  }
+
+//  printMyName(function(){
+//   myName('slava', ' mryasov')
+//  })
+
+
+// function sum(a, b) {
+//   let c = a + b
+//   console.log(c) 
+// }
+
+// function sumLog(y){
+//   console.log('сложение');
+// y()
+// }
+
+// sumLog(function(){
+//   sum(4, 5)
+// })
+
+// console.log(typeof sum)
+
