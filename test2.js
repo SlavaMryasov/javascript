@@ -440,3 +440,38 @@
 
 // console.log(typeof sum)
 
+
+
+
+                                                    // 16 spread 
+// const button = {
+//   width: 200,
+//   text: 'pupa'
+// }
+
+// const redButton = {
+//   ...button,
+//   color: 'red'
+// }
+
+// console.table(redButton)
+// console.table(button)
+
+
+
+const buttonInfo = {
+  text: 'buy'
+}
+
+const buttonStyle = {
+  width: 200,
+  height: 100,
+  color: 'red'
+}
+
+const button = {
+  ...buttonInfo,
+  ...buttonStyle
+}
+
+console.table(button)
