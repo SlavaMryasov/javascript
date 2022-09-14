@@ -459,19 +459,90 @@
 
 
 
-const buttonInfo = {
-  text: 'buy'
-}
+// const buttonInfo = {
+//   text: 'buy'
+// }
 
-const buttonStyle = {
-  width: 200,
-  height: 100,
-  color: 'red'
-}
+// const buttonStyle = {
+//   width: 200,
+//   height: 100,
+//   color: 'red'
+// }
 
-const button = {
-  ...buttonInfo,
-  ...buttonStyle
-}
+// const button = {
+//   ...buttonInfo,
+//   ...buttonStyle
+// }
 
-console.table(button)
+// console.table(button)
+
+
+                                                    //17 конкатенация строк
+
+//  const hello = 'hello'
+//  const world = 'world'
+ 
+//  const greeting = hello + ' ' + world
+
+//  console.log(greeting)
+
+
+
+
+// // шаблонная строка
+
+//  const hello = 'hello'
+//  const world = 'world'
+ 
+//  const greeting = `${hello} ${world}`
+
+//  console.log(greeting)
+
+
+
+// const myName = 'меня зовут Слава'
+// const myCity = 'я живу в городе Казань'
+
+// const information = `${myName}, ${myCity}`
+
+// console.log(information)
+
+
+// const myName = 'Слава'
+// const myCity = 'Казань'
+
+// const information = `Меня зовут ${myName}, я живу в городе ${myCity}`
+
+// console.log(information) 
+
+
+
+                                          // 18 ПРИСВАИВАНИЕ ФУНКЦИОНАЛЬНОГО ВЫРАЖЕНИЯ ПЕРЕМЕННОЙ
+
+// const myFunction = function(a, b) {
+//   let c
+//   a = a + 1
+//   c = a + b
+//   return c
+// }
+
+// console.log(myFunction(5, 3))
+
+
+
+                                                      // 19 стрелочне функции
+
+// const myFunction = (a, b) => {
+//   let c
+//   a = a + 1
+//   c = a + b
+//   return c
+//  }
+
+//  console.log(myFunction(2, 4))
+
+
+
+ setTimeout(() => {
+  console.log('отложенной сообщение')
+ }, 2000)
