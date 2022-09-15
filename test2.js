@@ -336,6 +336,7 @@
 // increasePersoneAge(personTwo)
 // console.log(personeOne.age, personTwo.age)
 
+
 // const counter = {
 //    meaning: 12 
 // }
@@ -543,6 +544,53 @@
 
 
 
- setTimeout(() => {
-  console.log('отложенной сообщение')
- }, 2000)
+//  setTimeout(() => {
+//   console.log('отложенной сообщение')
+//  }, 2000)
+
+
+
+                                                              // 20 Значения параметров функции по умолчанию
+
+//   function multByFactor(value, multiplier = 1) {
+//   return value * multiplier
+//  }
+
+//  console.log(multByFactor(10, 2),  multByFactor(5))
+ 
+
+
+//  анонимное функциональное выражение 
+
+//  const myFn = function(value, multiplier = 1) {
+//   return value * multiplier
+//  }
+
+//  console.log(myFn(10, 2),  myFn(5))
+
+
+
+ //стрелочная функция 
+
+//  const myFn = (value, multiplier = 1) => {
+//   return value * multiplier
+//  }
+
+//  console.log(myFn(10, 2),  myFn(5))
+
+
+
+
+const newPost = (post, addedAt = Date()) => ({
+  ...post,
+  addedAt,
+})
+
+const firstPost = {
+  id: 1,
+  author: 'slava'
+}
+
+console.log(newPost(firstPost))
+
+
