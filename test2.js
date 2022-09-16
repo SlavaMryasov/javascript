@@ -580,17 +580,83 @@
 
 
 
+// const newPost = function(post, addedAt = Date()) {
+//  const objForFn = {
+//   ...post,
+//   addedAt}
+//   return objForFn
+// }
 
-const newPost = (post, addedAt = Date()) => ({
-  ...post,
-  addedAt,
-})
+// const firstPost = {
+//   id: 1,
+//   name: 'slava',
+// }
 
-const firstPost = {
-  id: 1,
-  author: 'slava'
-}
-
-console.log(newPost(firstPost))
+// console.log(newPost(firstPost))
 
 
+
+
+
+// const newPost = function(post, addedAt = Date()) {
+//   const postForFn = Object.assign({}, post, addedAt)
+//   return postForFn
+// }
+
+// const firstPost = {
+//   id: 1,
+//   name: ' slava',
+// }
+
+
+// const result = (newPost(firstPost))
+// console.log(result)
+
+
+
+                                                        // 21 - ОБРАБОТКА ОШИБОК 
+
+//  const fnWithError = () => {
+//   throw new Error('Some Error')
+//  }
+
+//  fnWithError() // вызов фунции
+
+//  console.log('Continue...')
+
+
+
+
+// const fnWithError = () => {
+//   throw new Error('Some Error')
+//  }
+
+//  try{ 
+//   fnWithError() // вызов фунции
+//   }
+// catch{
+//   console.log('Continue...')
+//  }
+
+
+// const fnWithError = () => {
+//   throw new Error('Some error')
+// }
+
+// try {
+//   fnWithError()
+// } catch(error){
+// console.error(error)
+// console.log(error.message)
+// }
+
+// console.log('Continue...')
+
+
+                                                         // 22 - МАССИВЫ
+
+const myArray = [1, 2, 3]
+console.log(myArray)
+
+const myArray2 =  Array(1, 2, 3)
+console.log(myArray2)
