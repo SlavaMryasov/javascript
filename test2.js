@@ -655,8 +655,116 @@
 
                                                          // 22 - МАССИВЫ
 
-const myArray = [1, 2, 3]
-console.log(myArray)
+// const myArray = [1, 2, 3]
+// console.log(myArray)
 
-const myArray2 =  Array(1, 2, 3)
-console.log(myArray2)
+// const myArray2 =  Array(1, 2, 3)
+// console.log(myArray2)
+
+
+
+// const myArray = [1, true, 'a']
+// console.log(myArray) // [1, true, 'a']
+
+// console.log(myArray[0]) // 1
+// console.log(myArray[1]) // true
+
+// console.log(myArray.length) // 3
+
+// myArray.length = 7
+// console.log(myArray)
+
+
+
+// const myArray = [1, 2, 3, 4]  
+// console.log(myArray)             // [1, 2, 3, 4]
+// console.log(myArray.length)      // 4
+
+// myArray[2] = 'abc'
+
+// console.log(myArray) // [1, 2, 'abc', 4]
+// console.log(myArray.[2]) // 'abc'
+
+// myArray[4] = true
+
+// console.log(myArray) // [1, 2, 'abc', 4, true]
+// console.log(myArray.length) // 5
+
+
+
+// const myArray = [1, 2, 3]
+// console.log(myArray)
+
+// myArray.push(4)
+
+// console.log(myArray)
+
+// myArray.push(true)
+
+// console.log(myArray)
+
+
+// const myArray = [1, 2, 3]
+// console.log(myArray) // [1, 2, 3]
+
+// myArray.pop()
+
+// console.log(myArray) // [1, 2]
+
+// const removedElement = myArray.pop()
+
+// console.log(myArray) // [1]
+// console.log(removedElement) // 2
+
+
+
+// const myArray = [1, 2, 3]
+// console.log(myArray)
+
+// myArray.unshift(true)
+
+// console.log(myArray)
+
+// myArray.unshift('abc')
+
+// console.log(myArray)
+
+
+
+
+// const myArray = [1, 2, 3]
+// console.log(myArray) // [1, 2, 3]
+
+// myArray.shift()
+
+// console.log(myArray) // [2, 3]
+
+// const removedElement = myArray.shift() 
+
+// console.log(myArray) // [3]
+// console.log(removedElement) // 2
+
+
+myArray = [1, 2, 3]
+console.log(myArray) // [1 2 3]
+
+myArray.push(4)
+
+console.log(myArray) // [1 2 3 4]
+
+const del = myArray.pop()
+
+console.log(myArray)// [1 2 3]
+console.log(del) // 4
+
+myArray.unshift(4)
+
+console.log(myArray)// [4 1 2 3]
+
+const del2 = myArray.shift()
+console.log(del2) // 4
+
+console.log(myArray) // [1 2 3]
+
+
+
