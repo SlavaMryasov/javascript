@@ -745,26 +745,99 @@
 // console.log(removedElement) // 2
 
 
-myArray = [1, 2, 3]
-console.log(myArray) // [1 2 3]
+// myArray = [1, 2, 3]
+// console.log(myArray) // [1 2 3]
 
-myArray.push(4)
+// myArray.push(4)
 
-console.log(myArray) // [1 2 3 4]
+// console.log(myArray) // [1 2 3 4]
 
-const del = myArray.pop()
+// const del = myArray.pop()
 
-console.log(myArray)// [1 2 3]
-console.log(del) // 4
+// console.log(myArray)// [1 2 3]
+// console.log(del) // 4
 
-myArray.unshift(4)
+// myArray.unshift(4)
 
-console.log(myArray)// [4 1 2 3]
+// console.log(myArray)// [4 1 2 3]
 
-const del2 = myArray.shift()
-console.log(del2) // 4
+// const del2 = myArray.shift()
+// console.log(del2) // 4
 
-console.log(myArray) // [1 2 3]
+// console.log(myArray) // [1 2 3]
 
 
+
+
+
+
+
+
+// const myArray = [
+//   {name: 'маша', age: 24, budget: 200},
+//   {name: 'петя', age: 20, budget: 2500},
+//   {name: 'вася', age: 17, budget: 500},
+//   {name: 'игорь', age: 33, budget: 9500},
+//   {name: 'лена', age: 51, budget: 32500},
+//   {name: 'дима', age: 13, budget: 200},
+//   {name: 'костя', age: 18, budget: 3000},
+  
+// ]
+
+// const myArray2 = myArray.filter((el) => {
+//   if (el.age > 20)
+//  return 
+// })
+// console.log(myArray)
+// console.log(myArray2)
+
+
+
+
+                                      //23 - forEach
+
+
+// const myArray = [1, 2, 3]
+// console.log(myArray) // [ 1 2 3 ]
+
+// const res = myArray.forEach(el => console.log(el * 2))
+
+// console.log(res)
+// console.log(myArray) // массив не изменился
+
+
+                                          //24 - map
+
+// const myArray = [1, 2, 3]
+// console.log(myArray) // [ 1 2 3 ]
+
+// const newArray = myArray.map(el => el * 3)
+
+// console.log(myArray) // [1 2 3] массив не изменился
+// console.log(newArray) // [3 6 9] новый измененный массив
+
+
+const myArray = [
+  {name: 'маша', age: 24, budget: 200},
+  {name: 'петя', age: 20, budget: 2500},
+  {name: 'вася', age: 17, budget: 500},
+  {name: 'игорь', age: 33, budget: 9500},
+  {name: 'лена', age: 51, budget: 32500},
+  {name: 'дима', age: 13, budget: 200},
+  {name: 'костя', age: 18, budget: 3000},
+  
+]
+
+// const newArray = myArray.filter(el => el.name.includes('м'))
+// console.log(newArray)
+
+const newArray = myArray.filter(function(el) {
+  if (el.name.includes('м'))
+  return el.age
+} )
+
+ // newArrayName = {...newArray};
+
+const name = newArray.map(name => name.name)
+console.log(name)
 
