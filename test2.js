@@ -178,7 +178,7 @@
 // console.log(JSON.parse(postStringify))    // конвертировали строку в объект JS и вывели в консоль 
 
 
-                        //10 копирование примитивов и ссылочного типа
+//10 копирование примитивов и ссылочного типа
 
 // const a = 10
 // let b = a
@@ -216,7 +216,7 @@
 
 
 
-                                            //11 копирование ссылочного типа без мутаций
+//11 копирование ссылочного типа без мутаций
 
 ////assign
 
@@ -263,7 +263,7 @@
 
 
 
-                                          // 12 ФУНКЦИИ
+// 12 ФУНКЦИИ
 
 // let a = 5
 // let b = 3
@@ -315,8 +315,8 @@
 
 
 
-                                                    //13 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ
-                                                    
+//13 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ
+
 // const personeOne = {
 //     name: 'slava',
 //     age: 25
@@ -348,7 +348,7 @@
 // addition(counter)
 // console.log(counter)
 
-                                    //14 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ БЕЗ МУТАЦИИ
+//14 ПЕРЕДАЧА ЗНАЧЕНИЯ ПО ССЫЛКЕ БЕЗ МУТАЦИИ
 
 // Написать функцию счетчик при вызове которой в первый раз будет ввыведен первй позьзователь с лайком 1
 // при втором вызове будет выведен второй пользователь с лайком 2 
@@ -402,13 +402,13 @@
 // console.log(addAge)
 
 
-                                          //15 КОЛБЭК ФУНКЦИИ
+//15 КОЛБЭК ФУНКЦИИ
 
-  // function myName()  {
-  //   console.log('matrix')
-  // } 
-  
-  // setTimeout(myName, 2000)
+// function myName()  {
+//   console.log('matrix')
+// } 
+
+// setTimeout(myName, 2000)
 
 
 //   function myName(name, fam) {
@@ -444,7 +444,7 @@
 
 
 
-                                                    // 16 spread 
+// 16 spread 
 // const button = {
 //   width: 200,
 //   text: 'pupa'
@@ -478,11 +478,11 @@
 // console.table(button)
 
 
-                                                    //17 конкатенация строк
+//17 конкатенация строк
 
 //  const hello = 'hello'
 //  const world = 'world'
- 
+
 //  const greeting = hello + ' ' + world
 
 //  console.log(greeting)
@@ -494,7 +494,7 @@
 
 //  const hello = 'hello'
 //  const world = 'world'
- 
+
 //  const greeting = `${hello} ${world}`
 
 //  console.log(greeting)
@@ -518,7 +518,7 @@
 
 
 
-                                          // 18 ПРИСВАИВАНИЕ ФУНКЦИОНАЛЬНОГО ВЫРАЖЕНИЯ ПЕРЕМЕННОЙ
+// 18 ПРИСВАИВАНИЕ ФУНКЦИОНАЛЬНОГО ВЫРАЖЕНИЯ ПЕРЕМЕННОЙ
 
 // const myFunction = function(a, b) {
 //   let c
@@ -531,7 +531,7 @@
 
 
 
-                                                      // 19 стрелочне функции
+// 19 стрелочне функции
 
 // const myFunction = (a, b) => {
 //   let c
@@ -550,14 +550,14 @@
 
 
 
-                                                              // 20 Значения параметров функции по умолчанию
+// 20 Значения параметров функции по умолчанию
 
 //   function multByFactor(value, multiplier = 1) {
 //   return value * multiplier
 //  }
 
 //  console.log(multByFactor(10, 2),  multByFactor(5))
- 
+
 
 
 //  анонимное функциональное выражение 
@@ -570,7 +570,7 @@
 
 
 
- //стрелочная функция 
+//стрелочная функция 
 
 //  const myFn = (value, multiplier = 1) => {
 //   return value * multiplier
@@ -614,7 +614,7 @@
 
 
 
-                                                        // 21 - ОБРАБОТКА ОШИБОК 
+// 21 - ОБРАБОТКА ОШИБОК 
 
 //  const fnWithError = () => {
 //   throw new Error('Some Error')
@@ -653,7 +653,7 @@
 // console.log('Continue...')
 
 
-                                                         // 22 - МАССИВЫ
+// 22 - МАССИВЫ
 
 // const myArray = [1, 2, 3]
 // console.log(myArray)
@@ -781,7 +781,7 @@
 //   {name: 'лена', age: 51, budget: 32500},
 //   {name: 'дима', age: 13, budget: 200},
 //   {name: 'костя', age: 18, budget: 3000},
-  
+
 // ]
 
 // const myArray2 = myArray.filter((el) => {
@@ -794,7 +794,7 @@
 
 
 
-                                      //23 - forEach
+//23 - forEach
 
 
 // const myArray = [1, 2, 3]
@@ -806,7 +806,7 @@
 // console.log(myArray) // массив не изменился
 
 
-                                          //24 - map
+//24 - map
 
 // const myArray = [1, 2, 3]
 // console.log(myArray) // [ 1 2 3 ]
@@ -817,27 +817,45 @@
 // console.log(newArray) // [3 6 9] новый измененный массив
 
 
-const myArray = [
-  {name: 'маша', age: 24, budget: 200},
-  {name: 'петя', age: 20, budget: 2500},
-  {name: 'вася', age: 17, budget: 500},
-  {name: 'игорь', age: 33, budget: 9500},
-  {name: 'лена', age: 51, budget: 32500},
-  {name: 'дима', age: 13, budget: 200},
-  {name: 'костя', age: 18, budget: 3000},
-  
-]
+// const myArray = [
+//   {name: 'маша', age: 24, budget: 200},
+//   {name: 'петя', age: 20, budget: 2500},
+//   {name: 'вася', age: 17, budget: 500},
+//   {name: 'игорь', age: 33, budget: 9500},
+//   {name: 'лена', age: 51, budget: 32500},
+//   {name: 'дима', age: 13, budget: 200},
+//   {name: 'костя', age: 18, budget: 3000},
+// ]
 
-// const newArray = myArray.filter(el => el.name.includes('м'))
+
+
+// const newArray = myArray.filter(el => {
+//   if (el.name.includes('м'))
+//   return el.name
+// })
+
+// const name = newArray.map (nam => nam.name)
+// console.log(name)
+
+
+
+// const newArray = myArray.reduce((accum, name) => {
+//   if (name.name.includes('м'))
+//  accum = [accum.name ,name.name];
+//  return accum
+// } )
 // console.log(newArray)
 
-const newArray = myArray.filter(function(el) {
-  if (el.name.includes('м'))
-  return el.age
-} )
 
- // newArrayName = {...newArray};
+const myString = function (letter) {
+  const lett = letter.split('') 
+  return lett
+}
+const arr = myString('dsdsdwsd')
 
-const name = newArray.map(name => name.name)
-console.log(name)
+const countItems = arr.reduce((accum, item) => {
+  accum[item] = accum[item] ? accum[item] + 1 : 1; 
+  return accum;
+}, {});
 
+console.log(countItems)
