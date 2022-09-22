@@ -794,7 +794,7 @@
 
 
 
-//23 - forEach
+                                                  //23 - forEach
 
 
 // const myArray = [1, 2, 3]
@@ -806,7 +806,7 @@
 // console.log(myArray) // массив не изменился
 
 
-//24 - map
+                                                      //24 - map
 
 // const myArray = [1, 2, 3]
 // console.log(myArray) // [ 1 2 3 ]
@@ -815,6 +815,107 @@
 
 // console.log(myArray) // [1 2 3] массив не изменился
 // console.log(newArray) // [3 6 9] новый измененный массив
+
+
+
+                                                        //  25 - деструктуризация объектов
+   
+// const userProfile = { 
+//   name: 'slava',
+//   commentsQty: 23,
+//   hasSignedAgreement: false,
+//  }
+
+//  const {name, commentsQty, hasSignedAgreement } = userProfile;
+
+//  console.log(name) // slava
+//  console.log(commentsQty) // 23
+//  console.log(hasSignedAgreement)
+ 
+
+
+// const userProfile = {
+//   name: 'slava',
+//   id: 12,
+//   hasSignedAgreement: false,
+// }
+
+// const { name, id, hasSignedAgreement } = userProfile
+// console.log(name, id, hasSignedAgreement)
+// console.log(name, id, hasSignedAgreement)
+// console.log(name, id, hasSignedAgreement)
+
+
+                                                         //  26 - деструктуризация массивов
+
+  //  const fruits = ['apple', 'banana']
+   
+  //  const [ fruitOne, fruitTwo ] = fruits // указываем новые переменные в нужном порядке
+
+  //  console.log(fruitOne, fruitTwo)
+
+
+                                                         //  27 - деструктуризация в функциях
+
+  // const userProfile = {
+  //   name: 'slava',
+  //   commentsQty: 23,
+  //   hasSignedAgreement: false,
+  //  }
+
+  //  const userInfo = ({ name, commentsQty }) => {
+  //   if (!commentsQty) {
+  //     return `User ${name} has no commenst`  
+  //   }
+  //   return `User ${name} has ${commentsQty} comments`
+  //  }
+
+  //  console.log(userInfo(userProfile) )
+
+
+                                                          // 28 - деструктуризация в функциях
+  const userProfile = {
+    name: 'slava',
+    commentsQty: 22,
+    hasSignedAgreement: false
+  }
+
+  const userInfo = ({ name, commentsQty }) => {
+    if (!commentsQty) {
+       return `пользователь ${name} пока не оставил коментарии`
+    }
+    else {
+      return `пользователь ${name} комментировал ${commentsQty} раза`
+    }
+  }
+
+  const userCommensts = userInfo(userProfile)
+  console.log(userCommensts)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
 
 
 // const myArray = [
@@ -847,15 +948,74 @@
 // console.log(newArray)
 
 
-const myString = function (letter) {
-  const lett = letter.split('') 
-  return lett
-}
-const arr = myString('dsdsdwsd')
 
-const countItems = arr.reduce((accum, item) => {
-  accum[item] = accum[item] ? accum[item] + 1 : 1; 
-  return accum;
-}, {});
 
-console.log(countItems)
+
+// const numbers = [4, 3, 3, 1, 15, 7, 4, 19, 19]; // исходный массив
+
+// // получаем объект в котором ключ - это элемент массива,
+// // а значение - количество вхождений
+// // { '4': 2, '3': 2, '1': 1 ... }
+// const countItems = numbers.reduce((acc, item) => {
+//   acc[item] = acc[item] ? acc[item] + 1 : 1; // если элемент уже был, то прибавляем 1, если нет - устанавливаем 1
+//   return acc;
+// }, {});
+
+// // обрабатываем ключи объекта
+// const result = Object.keys(countItems).filter((item) => countItems[item] > 1);
+// console.dir(result); // => ['3', '4', '19']
+
+
+
+
+
+// const getCounts = function (letter) {
+//   const lett = letter.split('') 
+//   return lett
+// }
+// const arr = getCounts('aasabbbbddd')
+
+// const countItems = arr.reduce((accum, item) => {
+//   accum[item] = accum[item] ? accum[item] + 1 : 1; 
+//   return accum;
+// }, {});
+
+// console.log(countItems)
+
+
+
+
+// const getCounts = function (letter) {
+//   const lett = letter.split('') 
+//   return lett
+// }
+// const arr = getCounts('aasabbbbddd')
+
+// const countItems = arr.reduce((accum, item) => {
+// if (accum[item] = accum[item]) {
+//   accum[item] = accum[item]  + 1;
+// } else {
+//   accum[item] = 1;
+// }
+// return accum
+// },{});
+
+// console.log(countItems)
+
+
+
+// const myArray = [10, 20, 30, -36, 40, -10]
+
+// const getSum = myArray.reduce((accum, numb) => {
+//   accum = accum + numb
+//   return accum
+// })
+
+// console.log(getSum)
+
+
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------------------------------------------

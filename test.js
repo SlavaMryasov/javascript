@@ -1865,6 +1865,55 @@ console.log(newArray) // [3 6 9] новый измененный массив
 
 
 
-                                                  ДЕСТРУКТУРИЗАЦИЯ (практика  test2.js -25)
+                                                  ДЕСТРУКТУРИЗАЦИЯ (практика  test2.js -25, 26)
 
-   предположим, что у нас есть объект и мы хотим присвоить некоторые значения из свойств этого объекта новым переменным                                             
+    ДЕСТРУКТУРИЗАЦИЯ ОБЪЕКТОВ(практика  test2.js -25)
+
+   предположим, что у нас есть объект и мы хотим присвоить некоторые значения из свойств этого объекта новым переменным    
+   
+   const userProfile = { 
+    name: 'slava',
+    commentsQty: 23,
+    hasSignedAgreement: false,
+   }
+
+   const {name, commentsQty } = userProfile
+   const {hasSignedAgreement} = userProfile
+   
+   console.log(name) // slava
+   console.log(commentsQty) // 23
+
+   у нас есть объект со свойствами, предположим что мы хотим создать новые переменные, которые будут называться как свойства 
+   объекта userProfile и присвоить им соответствующие значения изходя из свойств объекта userProfile.
+
+   Использая такой синтаксис говорим интерпритатору, что мы хотим взять из объекта userProfile значения свойсты name и commentsQty
+   создать новые переменные с такими же именами и присвоить им значения соответствующих свойств в этом объекте
+
+
+   ДЕСТРУКТУРИЗАЦИЯ МАССИВОВ (практика  test2.js - 26)
+
+   const fruits = ['apple', 'banana']
+
+   const [fruitsOne, fruitsTwo] = fruits; // указываем новые переменные в нужном порядке
+
+   console.log(fruitsOne, fruitsTwo) 
+
+   в массивах порядок элементов важен
+
+
+   ДЕСТРУКТУРИЗАЦИЯ В функциях (практика  test2.js - 27)
+
+   const userProfile = {
+    name: 'slava',
+    commentsQty: 23,
+    hasSignedAgreement: false,
+   }
+
+   const userInfo = ({ name, commentsQty }) => {
+    if (!commentsQty) {
+      return `User ${name} has no commenst`  
+    }
+    return `User ${name} has ${commentsQty} comments`
+   }
+
+   userInfo(userProfile) 
