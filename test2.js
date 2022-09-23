@@ -873,34 +873,113 @@
   //  console.log(userInfo(userProfile) )
 
 
-                                                          // 28 - деструктуризация в функциях
-  const userProfile = {
-    name: 'slava',
-    commentsQty: 22,
-    hasSignedAgreement: false
+  //                                                         
+  // const userProfile = {
+  //   name: 'slava',
+  //   commentsQty: 22,
+  //   hasSignedAgreement: false
+  // }
+
+  // const userInfo = ({ name, commentsQty }) => {
+  //   if (!commentsQty) {
+  //      return `пользователь ${name} пока не оставил коментарии`
+  //   }
+  //   else {
+  //     return `пользователь ${name} комментировал ${commentsQty} раза`
+  //   }
+  // }
+
+  // const userCommensts = userInfo(userProfile)
+  // console.log(userCommensts)
+
+
+                                                   // 28 - УСЛОВНЫЕ ИНСТРУКЦИИ              
+
+//   let val = 10
+ 
+//  if ( val > 5 ) {
+//   val += 20
+//  }
+
+//  console.log(val) // 30
+
+
+// const person = {
+//   age: 20 
+//  }
+
+// if (!person.name) { 
+//   console.log('Имя не указано')
+//   // другие действия в случае, если свайства name у объкта person нет
+//  }
+
+
+                                                      
+
+//  let val = 10
+
+// if (val < 5) {
+//   val += 20
+// } else {
+//   val -=20
+// }
+//   console.log(val) // -10
+
+
+
+// const age = 11
+
+// if (age> 18) {
+//   console.log('is adult')
+// } else if (age >= 12) {
+//   console.log('is teenager')
+// } else {
+//   console.log('is child')
+// }
+
+
+// const age = 11
+
+// if (age > 18) {
+//   console.log('is adult')
+//   return age
+// } 
+// if (age >= 12) {
+//   console.log('is teenager')
+//   return age
+// }
+// if (age < 12) {
+//   console.log('is child')
+//   return age
+// }
+
+
+// const age = 12
+
+// if (age > 18) {
+//   console.log('is adult')
+ 
+// } 
+// if (age >= 12 && age < 18) {
+//   console.log('is teenager')
+// }
+// if (age < 12) {
+//   console.log('is child')
+ 
+// }
+
+
+
+const sumPositiveNumber = (a, b) => {
+  if (typeof a !=='number' || typeof b !=='number') {  // в одинарных кавычках указываем тип переменной
+    return 'One of the argument is not a number'
+  } 
+  if (a <= 0 || b <= 0) {
+    return 'Numbers are not positive'
   }
-
-  const userInfo = ({ name, commentsQty }) => {
-    if (!commentsQty) {
-       return `пользователь ${name} пока не оставил коментарии`
-    }
-    else {
-      return `пользователь ${name} комментировал ${commentsQty} раза`
-    }
-  }
-
-  const userCommensts = userInfo(userProfile)
-  console.log(userCommensts)
-
-
-
-
-
-
-
-
-
-
+  return a + b
+}
+console.log(sumPositiveNumber(2, 4))
 
 
 
