@@ -970,16 +970,85 @@
 
 
 
-const sumPositiveNumber = (a, b) => {
-  if (typeof a !=='number' || typeof b !=='number') {  // в одинарных кавычках указываем тип переменной
-    return 'One of the argument is not a number'
+// const sumPositiveNumber = (a, b) => {
+//   if (typeof a !=='number' || typeof b !=='number') {  // в одинарных кавычках указываем тип переменной
+//     return 'One of the argument is not a number'
+//   } 
+//   if (a <= 0 || b <= 0) {
+//     return 'Numbers are not positive'
+//   }
+//   return a + b
+// }
+// console.log(sumPositiveNumber(2, 4))
+
+
+// const numPos = (a, b) => {
+//   if (typeof a !=='number' && typeof b !=='number') {  
+//    return 'аргументы не числа'
+//   } 
+//   if (typeof a !== 'number') {
+//     return 'первый аргумент не число'
+//   }
+//   if (typeof b !== 'number') {
+//     return 'второй аргумент не число'
+//   }
+//   if (a <= 0 && b <= 0) {
+//     return 'аргументы неположительные'
+//   }
+//   if (a <= 0){
+//     return 'первый аргумент неположительный'
+//   }
+//   if (b <= 0){
+//     return 'второй аргумент неположительный'
+//   }
+//   return a + b
+// }
+
+// console.log(numPos(2, -2))
+
+
+
+
+
+// const month = 3
+
+// switch(month) {
+//   case 12:
+//     console.log('декабь')
+//     break
+//   case 1:
+//     console.log('Январь')
+//     break
+//   case 2: 
+//   console.log('Февраль')
+//     break
+//   default:
+//     console.log('это не зимний месяц')      
+// }
+
+
+                                                    // 29 ТЕРНАРНЫЙ ОПЕРАТОР
+const numPos = (a, b) => {
+  const a1 = (a <= 0 ? -a: a )
+  if (typeof a !=='number' && typeof b !=='number') {  
+   return 'аргументы не числа'
   } 
-  if (a <= 0 || b <= 0) {
-    return 'Numbers are not positive'
+  if (typeof a !== 'number') {
+    return 'первый аргумент не число'
   }
-  return a + b
+  if (typeof b !== 'number') {
+    return 'второй аргумент не число'
+  }
+  if (b <= 0){
+    return 'второй аргумент неположительный'
+  }
+  return a1 + b
 }
-console.log(sumPositiveNumber(2, 4))
+
+console.log(numPos(-5, 2))
+
+
+
 
 
 
