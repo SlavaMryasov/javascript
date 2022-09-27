@@ -1028,24 +1028,118 @@
 
 
                                                     // 29 ТЕРНАРНЫЙ ОПЕРАТОР
-const numPos = (a, b) => {
-  const a1 = (a <= 0 ? -a: a )
-  if (typeof a !=='number' && typeof b !=='number') {  
-   return 'аргументы не числа'
-  } 
-  if (typeof a !== 'number') {
-    return 'первый аргумент не число'
-  }
-  if (typeof b !== 'number') {
-    return 'второй аргумент не число'
-  }
-  if (b <= 0){
-    return 'второй аргумент неположительный'
-  }
-  return a1 + b
-}
+// const numPos = (a, b) => {
+//   const a1 = (a <= 0 ? -a: a )
+//   if (typeof a !=='number' && typeof b !=='number') {  
+//    return 'аргументы не числа'
+//   } 
+//   if (typeof a !== 'number') {
+//     return 'первый аргумент не число'
+//   }
+//   if (typeof b !== 'number') {
+//     return 'второй аргумент не число'
+//   }
+//   if (b <= 0){
+//     return 'второй аргумент неположительный'
+//   }
+//   return a1 + b
+// }
 
-console.log(numPos(-5, 2))
+// console.log(numPos(-5, 2))
+
+
+
+
+// for (let i = 0; i < 5; i++) {
+//   console.log(i)
+// }
+
+                                                            // 30 ЦИКЛЫ
+
+//for
+
+// const myArray = ['first', 'second', 'third']
+// for (i = 0; i < myArray.index; i++) {
+//   console.log(myArray[i])
+// }
+
+// const myArray = ['first', 'second', 'third']
+// myArray.forEach((element, index) => {                       // ТАК НАДА
+//   console.log(index, element)
+// })
+
+// const myArray = ['ss', 'dd', 'ff']
+// myArray.forEach((el, index) => {
+//   console.log(index, el + ' 22')
+// })
+// console.log(myArray)
+
+
+
+//while
+
+// let i = 0;
+
+// while (i < 5) {
+//   console.log(i)
+//   i++
+// }
+
+
+
+// do while
+
+// let i = 10;
+
+// do {
+//   console.log(i)
+//   i++
+// } while (i < 5)
+
+
+
+
+// for in
+
+// const user1 = {
+//   name: 'slava',
+//   id: 22,
+//   sign: true, 
+// }
+
+// for (key in user1) {
+//   console.log(key, user1[key] )
+// }
+
+
+// const user1 = {
+//   name: 'slava',
+//   id: 22,
+//   sign: true, 
+// }
+// console.log(Object.keys(user1)) // эта строка для понимания, что на этом этапе массив
+
+// Object.keys(user1).forEach(key => {
+//   console.log(key, user1[key])
+// })
+
+
+// const user1 = {
+//   name: 'slava',
+//   id: 22,
+//   sign: true, 
+// }
+// Object.values(user1).forEach(value => {
+//   console.log(value)
+// })
+
+
+
+
+
+
+
+
 
 
 
@@ -1149,6 +1243,31 @@ console.log(numPos(-5, 2))
 // },{});
 
 // console.log(countItems)
+
+
+
+
+
+
+// // ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ
+// const myString = (el) => {
+//   const sp = el.split('')
+//   const red = sp.reduce((accum, ell) => {
+//     if (accum[ell] = accum[ell]){
+//       accum[ell] = accum[ell]  + 1;
+//     } else {
+//       accum[ell] = 1;
+//     }
+//     return accum
+//   },{})
+//   return red
+//   }
+//   console.log(myString('aasabbbbddd'))
+//   // ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ ЭТО ГОРДОСТЬ
+  
+  
+
+
 
 
 
