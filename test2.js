@@ -1136,6 +1136,28 @@
 
 
 
+                                                              //31 классы и прототипы
+
+class Comment { 
+  constructor(text) {
+    this.text = text
+    this.votesQty = 0
+  }
+
+  upvote() {
+    this.votesQty += 1
+  }
+}
+
+const firstComment = new Comment('First comment')
+console.log(firstComment)
+
+
+
+
+
+
+
 
 
 
@@ -1279,6 +1301,23 @@
 // })
 
 // console.log(getSum)
+
+
+
+// const userProfile = {
+//   userName: 'slava',
+//   id: 1,
+//   age: 25,
+//   height: 180,
+// }
+
+// const userProfileKeys = Object.keys(userProfile)
+// const userProfileValuse = Object.values(userProfile)
+
+// const returnUserProfile = {};
+// userProfileKeys.forEach((key, i) => returnUserProfile[key] = userProfileValuse[i])
+
+// console.log(returnUserProfile)
 
 
 //---------------------------------------------------------------------------------------------------------------------
