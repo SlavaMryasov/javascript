@@ -1138,7 +1138,63 @@
 
                                                               //31 классы и прототипы
 
-class Comment { 
+// class Comment { 
+//   constructor(text) {
+//     this.text = text
+//     this.votesQty = 0
+//   }
+
+//   upvote() {
+//     this.votesQty += 1
+//   }
+// }
+
+// // const firstComment = new Comment('First comment')
+// // console.log(firstComment)
+// // firstComment.upvote()
+// // console.log(firstComment.votesQty)
+// // firstComment.upvote()
+// // console.log(firstComment)
+// // firstComment.upvote()
+// // console.log(firstComment)
+// // firstComment.upvote()
+// // console.log(firstComment)
+
+// const firstComment = new Comment('first comment')
+
+// console.log(firstComment.hasOwnProperty('text'), // true
+// firstComment.hasOwnProperty('votesQty'), // true
+// firstComment.hasOwnProperty('upvote'), // false
+// firstComment.hasOwnProperty('hasOwnProperty')) // false
+
+
+// class Comment {
+//   constructor(text) {
+//     this.text = text
+//     this.votesQty = 0
+//   }
+
+//   upvote() {
+//     this.votesQty += 1
+//   }
+//  }
+
+//  const firstComment = new Comment('first comment');
+//  const secondComment = new Comment('second comment');
+//  const thirdComment = new Comment('third comment');
+
+//  firstComment.upvote()
+//  console.log(firstComment)
+//  secondComment.upvote()
+//  secondComment.upvote()
+//  secondComment.upvote()
+//  secondComment.upvote()
+//  secondComment.upvote()
+//  console.log(secondComment)
+
+
+
+class Comment {
   constructor(text) {
     this.text = text
     this.votesQty = 0
@@ -1147,11 +1203,14 @@ class Comment {
   upvote() {
     this.votesQty += 1
   }
-}
 
-const firstComment = new Comment('First comment')
-console.log(firstComment)
+  static mergeComments(first, second) {
+    return `${first} ${second}`
+  }
+ }
 
+ Comment.mergeComments('First comment', 'Second comment')
+   
 
 
 
