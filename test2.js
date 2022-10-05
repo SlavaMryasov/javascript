@@ -1168,6 +1168,9 @@
 // firstComment.hasOwnProperty('hasOwnProperty')) // false
 
 
+
+
+
 // class Comment {
 //   constructor(text) {
 //     this.text = text
@@ -1189,37 +1192,33 @@
 //  secondComment.upvote()
 //  secondComment.upvote()
 //  secondComment.upvote()
-//  secondComment.upvote()
 //  console.log(secondComment)
 
 
 
-class Comment {
-  constructor(text) {
-    this.text = text
-    this.votesQty = 0
-  }
+// class Comment {
+//   constructor(text) {
+//     this.text = text
+//     this.votesQty = 0
+//   }
 
-  upvote() {
-    this.votesQty += 1
-  }
+//   upvote() {
+//     this.votesQty += 1
+//   }
 
-  static mergeComments(first, second) {
-    return `${first} ${second}`
-  }
- }
+//   static mergeComments(first, second) {
+//     return `${first} ${second}`
+//   }
+//  }
 
- Comment.mergeComments('First comment', 'Second comment')
+//  Comment.mergeComments('First comment', 'Second comment')
    
 
 
 
 
 
-
-
-
-
+console.log(Array instanceof Object)
 
 
 
