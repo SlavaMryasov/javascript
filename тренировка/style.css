@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.containerSlides {
+  width: 612px;
+  height: 314px;
+  background-color: bisque;
+  margin-bottom: 5vh;
+  overflow: hidden;
+  outline: 2px solid black;
+}
+
+.slider-line {
+  height: 314px;
+  width: 3180px;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1.5s;
+}
+
+.image {
+  width: 612px;
+}
+body {
+  transition: all ease 1.5s;
+}
+
+.sqr {
+ position: relative;
+ top: 350px;
+ left: 6px;
+  width: 650px;
+  height: 30px;
+}
+
+.odin, .desyat, .dva, .tri, .chet, .pyat, .shest, .sem, .vosem, .devyat {
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  background-Color: white;
+  border-radius: 5px;
+}
+.dva {
+  background-color: #FFFFE0;
+}
+.tri {
+  background-color: #FFFACD;
+}
+.chet {
+  background-color: #FAFAD2;
+}
+.pyat {
+  background-color: #FFEFD5;
+}
+.shest {
+  background-color:	#FFE4B5;
+}
+.sem {
+  background-color: #FFDAB9;
+}
+.vosem {
+  background-color: #EEE8AA;
+}
+.devyat {
+  background-color: #F0E68C;
+}
+.desyat {
+  background-color: #BDB76B;
+}
