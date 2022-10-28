@@ -13,7 +13,6 @@
 .containerSlides {
   width: 612px;
   height: 314px;
-  background-color: bisque;
   margin-bottom: 5vh;
   overflow: hidden;
   outline: 2px solid black;
@@ -76,4 +75,21 @@ body {
 }
 .desyat {
   background-color: #BDB76B;
+}
+
+#rec {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  background: blue;
+}
+ul{
+  position: absolute;
+  top: 100px;
+}
+ol{
+  position: absolute;
+  top: 100px;
+  left: 100px;
+
 }
