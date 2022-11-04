@@ -91,5 +91,41 @@ ol{
   position: absolute;
   top: 100px;
   left: 100px;
+}
 
+#input {
+  position: absolute;
+  top: 180px;
+  left: 180px;
+}
+#table1 {
+  position: absolute;
+  top: 120px;
+  left: 220px;
+}
+td {
+  outline: 1px solid black;
+  width: 100px;
+}
+
+td[cell-red = "#CC0000"] {
+  background: red;
+}
+
+td[cell-red = "lightRed"] {
+  background: #FF9999;
+}
+td[data-color = 'blue'] {
+  background: blue;
+}
+
+.msg {
+  width: 400px;
+  margin: auto;
+  text-align: center;
+  background: #204548;
+  padding: 5px;
+  border-radius: 5px;
+  color: #eee;
+  font-size: 24px;
 }

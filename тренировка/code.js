@@ -304,9 +304,264 @@ console.log('вывод текстового содержимого body');
 console.log(document.body.textContent);
 
 // для скрытия таега используется hidden (пример h1.hidden)
+let hi = document.getElementById('earth');
+setInterval(() => hi.hidden = !hi.hidden, 1000); 
+
+capsCar = document.querySelector('ol').firstChild.nextSibling;
+setTimeout(() => capsCar.innerHTML = 'CAR',1500);
+
+// let bodyy = document.body;
+
+// bodyy.myStyle = {
+//   background: 'red',
+//   length: 20,
+// }
+
+// bodyy.getBackground = function () {
+//   return bodyy.myStyle.background;
+// }
+
+// console.log(bodyy.getBackground());
+// console.log(bodyy.myStyle.background);
+// console.log(bodyy.nodeName);
+// console.log(bodyy.tagName);
+
+// console.dir(bodyy);
+// let odin = document.getElementsByClassName('star')[1];
+// console.dir(odin);
+// console.log(odin.hasAttribute('def'));
+// console.log(odin.getAttribute('def'));
+// odin.setAttribute('def', 'значе');
+// console.log(odin.getAttribute('def'));
+// odin.removeAttribute('def');
+// console.log(odin.hasAttribute('def'));
+
+// let chek = document.getElementById('input');
+// // console.dir(chek);
+// // setTimeout(() => chek.checked = true, 3000);
+
+// setTimeout(() => {
+//   console.dir(chek.checked)
+// }, 3200);
+
+// let laba =  document.getElementById('ol');
+ 
+// chek.addEventListener('click', () => {
+//   if (chek.checked == true) {
+//     laba.hidden = true;
+//   }
+//   else {
+//     laba.hidden = false;
+//   }
+// });
+// let flSkip = false;
+// for (let i of document.querySelectorAll('[cell-red]')) {
+//   if(!flSkip) i.setAttribute('cell-red', 'lightRed');
+//   flSkip = !flSkip
+// }
+
+// урок 5 - работа с нестандартными свойствами DOM-элементов: getAttribute, setAttribute, dataset
+
+//5.1 общее
+console.log('--------------------------------------------------');
+console.log('добавляем новые свойства объету body')
+let body1 = document.body;
+body1.myStyle = 'color: red'; // добавили новое свойство myStyle к body
+console.log(body1.myStyle, '- новое свойство');
+
+console.log('--------------------------------------------------');
+console.log('присваеваем не строку, как в примере выше, а объект и вызываем свойство lenght');
+let body2 = document.body;
+body2.myStyle = {
+  length: 20,
+  color: 'red',
+}
+console.log(body2.myStyle.length);
+
+console.log('--------------------------------------------------');
+console.log('добавляем метод вызова свойства color к body');
+let body3 = document.body;
+body3.myStyle = {
+  length: 20,
+  color: 'red',
+}
+body3.getColor = function() {
+  return this.myStyle.color;
+}
+console.log(body3.getColor());
+
+console.log('--------------------------------------------------');
+console.log('атрибут id автоматически присваивается объету дерева, если оно записано в верстке.')
+console.log('Этог можно увидеть, если вывести объект с помощью console.dir')
+console.log('--------------------------------------------------');
+
+//5.2 методы для нестандартных атрибутов: hasAttribute, getAttribute, removeAttribute, Attribute, dataSet
+console.log('проверяем есть ли атрибут def у odin:')
+let odin = document.getElementById('odin');
+console.log(odin.hasAttribute('def'));
+
+console.log('добавляем атрибут def со значением в odin');
+odin.setAttribute('def', 'значение');
+
+console.log('получаем значение атрибута:');
+console.log(odin.getAttribute('def'));
+
+console.log('меняем значение атрибута');
+odin.setAttribute('def', 'новое значение');
+
+console.log('проверяем есть ли атрибут def у odin:');
+console.log(odin.hasAttribute('def'));
+
+console.log('получаем значение атрибута:');
+console.log(odin.getAttribute('def'));
+
+console.log('удаляем атрибут');
+odin.removeAttribute('def');
+
+console.log('проверяем есть ли атрибут def у odin:');
+console.log(odin.hasAttribute('def'));
+
+console.log('вывод всех атрибутов у odin');
+for (let atr of odin.attributes) console.log(atr);
 
 
+//5.3 практика использования нестандартных атрибутов
 
+let inp = document.querySelectorAll('[data-cell-red]'); // нашли все элементы с атрибутом cell-red
+for (let cell of inp) {
+  let attr = cell.getAttribute('data-cell-red'); //получили значение атрибута у элементов с атрибутом cell-red
+  cell.style.background = attr; // поменяли цвет, который указан в атрибуте в html
+}
+
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+
+let ch1 = document.body.childNodes;
+for(let ch2 of ch1) console.log(ch2);
+
+console.log('--------------------------------------------------');
+let ch3 = Array.from(ch1);
+ch3.forEach((ch4) => console.log(ch4));
+
+console.log('--------------------------------------------------');
+let ch5 = document.body.childNodes[0];
+console.log(ch5);
+console.log('--------------------------------------------------');
+let ch6 = document.body.children[1];
+console.log(ch6);
+console.log('--------------------------------------------------');
+let ch7 = document.body.firstChild;
+console.log(ch7);
+console.log('--------------------------------------------------');
+let ch8 = document.body.lastChild;
+console.log(ch8);
+
+console.log('--------------------------------------------------');
+let ch9 = document.body.hasChildNodes();
+console.log(ch9);
+
+console.log('--------------------------------------------------');
+let ch10 = document.body.children;
+for (let ch11 of ch10) console.log(ch11);
+
+console.log('--------------------------------------------------');
+let ch12 = document.body.previousSibling.previousSibling;
+console.log(ch12);
+let ch13 = document.head.nextSibling.nextSibling;
+console.log(ch13);
+
+console.log('--------------------------------------------------');
+let ch14 = document.body.parentNode;
+console.log(ch14);
+
+console.log('--------------------------------------------------');
+let ch15 = document.getElementById('car');
+console.log(ch15);
+
+console.log('--------------------------------------------------');
+console.log(ch15.matches('li'));
+console.log('--------------------------------------------------');
+console.log(ch15.closest('body'))
+
+console.log('--------------------------------------------------');
+let ch16 = document.head.constructor.name;
+console.log(ch16);
+
+console.log('--------------------------------------------------');
+let ch17 = document.head.nodeName;
+console.log(ch17);
+
+console.log('--------------------------------------------------');
+ch18 = document.querySelector('ul').textContent;
+console.log(ch18);
+
+console.log('--------------------------------------------------');
+
+// let ch19 = document.querySelector('h1');
+// console.log(ch19);
+// console.log(ch19.innerHTML);
+// let ch20 = ch19.innerHTML = 'замен';
+// console.log(ch20.outerHTML = '<h3>замена с тегом</h3>')
+// let ch19 = document.querySelector('h1');
+// console.log(ch19.outerHTML = '<h2> замена с тегом</h2>')
+
+let ch20 = document.getElementById('sun');
+console.log(ch20);
+ch20.hidden = true;
+console.log(ch20);
+
+console.log('--------------------------------------------------');
+
+let attrr = document.getElementsByTagName('table')[0].children[0].children[0].children[1];
+attrr.setAttribute('data-color', 'blue');
+
+
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+console.log('-------------------повторение-1-5-урок------------');
+
+//урок 6 - создание и добавление элементов DOM createElement, append, remuve, insertAjacentHTML
+
+//6.1 -создаем див с помощью createElement добавляем див в дерево с помощью append(добавляем в конец родителя)
+console.log('создаем и добавляем див с помощью createElement и append')
+let div = document.createElement('div');
+div.className = 'msg';
+div.setAttribute('id', 'inportant');
+div.innerHTML = 'Важная информация!';
+document.body.append(div);
+
+console.log('--------------------------------------------------');
+console.log('--------------------------------------------------');
+
+let div2 = document.createElement('div');
+div2.className = 'msg';
+div2.innerHTML = 'невероятно важная информация!!!';
+document.getElementById('inportant').prepend(div2);
+
+
+let ul = document.querySelector('ul');
+let firstULi = document.createElement('li');
+firstULi.className = 'star';
+firstULi.innerHTML = 'полярная';
+ul.prepend(firstULi);
+firstULi.setAttribute('id', 'polaris');
+
+let secondULi = document.createElement('li');
+secondULi.className = 'star';
+secondULi.innerHTML = 'плутон';
+secondULi.setAttribute('id', 'pluto');
+ul.append(secondULi);
+
+let thirdULi = document.createElement('li');
+thirdULi.innerHTML = 'альтаир';
+thirdULi.className = 'star';
+thirdULi.setAttribute('id', 'altair');
+secondULi.after(thirdULi);
 
 
 

@@ -6,9 +6,10 @@
         <title>Document</title>
     </head>
     <body><!--коментарий для просмотра в дереве--><h1>заголовок</h1>
+        <!--<div class="msg">Важная информация!</div>-->
         <div class="container" id="container">
-            <div class="sqr">
-                <div class="odin"></div>
+            <div class="sqr" id="sqr">
+                <div class="odin" id="odin"></div>
                 <div class="dva"></div>
                 <div class="tri"></div>
                 <div class="chet"></div> 
@@ -35,17 +36,28 @@
             <div class="rec" id="rec"></div>
         </div>
         <ul class="system">
-            <li class="star">солнце</li>
-            <li class="star">сириус</li>
-            <li class="planet">земля</li>
+            <li class="star" id="sun" >солнце</li>
+            <li class="star" def="значение">сириус</li>
+            <li class="planet" id="earth">земля</li>
             <li class="planet">марс</li>
         </ul>
-        <ol>
-            <li>car</li>
-            <li>apple</li>
+        <ol id="ol">
+            <li id="car">car</li>
+            <li id="apple">apple</li>
             <li>table</li>
             <li>ski</li>
         </ol>
+        <input type="checkbox" id="input">
+        <table id="table1">
+            <tr>
+                <td data-cell-red="#CC0000">frog1</td>
+                <td data-cell-blue="blue">frog2</td>
+            </tr>
+            <tr>
+                <td data-cell-blue="blue">frog3</td>
+                <td data-cell-red="#CC0000">frog4</td>
+            </tr>
+        </table>
         <!--коментарий для просмотра в дереве-->
         <script src="code.js"></script>
     </body>
