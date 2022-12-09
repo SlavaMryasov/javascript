@@ -310,33 +310,33 @@ setInterval(() => hi.hidden = !hi.hidden, 1000);
 capsCar = document.querySelector('ol').firstChild.nextSibling;
 setTimeout(() => capsCar.innerHTML = 'CAR',1500);
 
-// let bodyy = document.body;
+// // let bodyy = document.body;
 
-// bodyy.myStyle = {
-//   background: 'red',
-//   length: 20,
-// }
+// // bodyy.myStyle = {
+// //   background: 'red',
+// //   length: 20,
+// // }
 
-// bodyy.getBackground = function () {
-//   return bodyy.myStyle.background;
-// }
+// // bodyy.getBackground = function () {
+// //   return bodyy.myStyle.background;
+// // }
 
-// console.log(bodyy.getBackground());
-// console.log(bodyy.myStyle.background);
-// console.log(bodyy.nodeName);
-// console.log(bodyy.tagName);
+// // console.log(bodyy.getBackground());
+// // console.log(bodyy.myStyle.background);
+// // console.log(bodyy.nodeName);
+// // console.log(bodyy.tagName);
 
-// console.dir(bodyy);
-// let odin = document.getElementsByClassName('star')[1];
-// console.dir(odin);
-// console.log(odin.hasAttribute('def'));
-// console.log(odin.getAttribute('def'));
-// odin.setAttribute('def', 'значе');
-// console.log(odin.getAttribute('def'));
-// odin.removeAttribute('def');
-// console.log(odin.hasAttribute('def'));
+// // console.dir(bodyy);
+// // let odin = document.getElementsByClassName('star')[1];
+// // console.dir(odin);
+// // console.log(odin.hasAttribute('def'));
+// // console.log(odin.getAttribute('def'));
+// // odin.setAttribute('def', 'значе');
+// // console.log(odin.getAttribute('def'));
+// // odin.removeAttribute('def');
+// // console.log(odin.hasAttribute('def'));
 
-// let chek = document.getElementById('input');
+let chek = document.getElementById('input');
 // // console.dir(chek);
 // // setTimeout(() => chek.checked = true, 3000);
 
@@ -344,21 +344,21 @@ setTimeout(() => capsCar.innerHTML = 'CAR',1500);
 //   console.dir(chek.checked)
 // }, 3200);
 
-// let laba =  document.getElementById('ol');
+let laba =  document.getElementById('ol');
  
-// chek.addEventListener('click', () => {
-//   if (chek.checked == true) {
-//     laba.hidden = true;
-//   }
-//   else {
-//     laba.hidden = false;
-//   }
-// });
-// let flSkip = false;
-// for (let i of document.querySelectorAll('[cell-red]')) {
-//   if(!flSkip) i.setAttribute('cell-red', 'lightRed');
-//   flSkip = !flSkip
-// }
+chek.addEventListener('click', () => {
+  if (chek.checked == true) {
+    laba.hidden = true;
+  }
+  else {
+    laba.hidden = false;
+  }
+});
+// // let flSkip = false;
+// // for (let i of document.querySelectorAll('[cell-red]')) {
+// //   if(!flSkip) i.setAttribute('cell-red', 'lightRed');
+// //   flSkip = !flSkip
+// // }
 
 // урок 5 - работа с нестандартными свойствами DOM-элементов: getAttribute, setAttribute, dataset
 
@@ -536,8 +536,8 @@ div.innerHTML = 'Важная информация!';
 document.body.append(div);
 
 console.log('--------------------------------------------------');
-console.log('--------------------------------------------------');
-
+//6.2 -создаем див с помощью createElement добавляем див в дерево с помощью prepend(добавляем в начало родителя)
+console.log('создаем и добавляем див с помощью createElement и prepend')
 let div2 = document.createElement('div');
 div2.className = 'msg';
 div2.innerHTML = 'невероятно важная информация!!!';
@@ -557,11 +557,58 @@ secondULi.innerHTML = 'плутон';
 secondULi.setAttribute('id', 'pluto');
 ul.append(secondULi);
 
+console.log('--------------------------------------------------');
+//6.3 -создаем ли с помощью createElement добавляем див в дерево с помощью after(добавляем после )
+console.log('создаем и добавляем ли с помощью createElement и after')
 let thirdULi = document.createElement('li');
 thirdULi.innerHTML = 'альтаир';
 thirdULi.className = 'star';
 thirdULi.setAttribute('id', 'altair');
 secondULi.after(thirdULi);
+
+let fourth = document.createElement('li');
+fourth.innerHTML = 'вега';
+fourth.className = 'star';
+fourth.setAttribute('id','vega');
+thirdULi.after(fourth);
+
+console.log('--------------------------------------------------');
+//6.4 -создаем ли с помощью createElement добавляем ли в дерево с помощью before(добавляем перед)
+console.log('создаем и добавляем див с помощью createElement и prepend')
+let fifth = document.createElement('li');
+fifth.innerHTML = 'альдебаран';
+fifth.className = 'star';
+fifth.setAttribute('id','aldebaran');
+fourth.before(fifth); 
+
+//6.5 - замена всего списка ul
+console.log('замена всего списка ul');
+let sys = document.getElementById('system');
+let ull = document.querySelector('ul');
+
+chek.addEventListener('click', () => {
+  if(chek.checked == true) {
+  ull.replaceWith(document.createElement('hr'));
+  }
+  else {
+    let hrr = document.querySelector('hr');
+    hrr.replaceWith(ull); 
+  }
+});
+
+//6.6 - создание текстовых элементов с момощью createTextNode
+console.log('создание текстовых элементов с момощью createTextNode');
+let textNode = document.createTextNode('текстовый элемент');
+document.body.append(textNode);
+
+let migalOchka = document.createTextNode('МигалОчка');
+document.getElementById('rec').after(migalOchka);
+ 
+let list3 = document.querySelector('ol')
+list3.insertAdjacentHTML('afterbegin','<li>Jjjj')
+console.log(list3);
+
+
 
 
 

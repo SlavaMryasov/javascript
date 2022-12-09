@@ -1,33 +1,60 @@
-<html>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #square1{
+      width: 150px;
+      height: 150px;
+      outline: 1px solid black;
+      background: green;
+    }
+    #square2{
+      width: 150px;
+      height: 150px;
+      outline: 1px solid black;
+      background: red;
+    }
+    #button5{
+      position: absolute;
+      left: 200px;
+      top: 100px
+    }
+    .sqr{
+      width: 50px;
+      height: 50px;
+      outline: 1px solid black;
+      background: red;
+      display: inline-block;
+    }
+  </style>
+</head>
 <body>
-  <div>Начало</div>
-
-  <ul>
-    <li>Информация</li>
-  </ul>
-
-  <div>Конец</div>
-
-  <script>
-// for ( i = 0; i < document.body.childNodes.length; i++) {
-//   alert(document.body.childNodes[i]);      // последовательный вывод детей body
-// }
-
-
-// for (let node of document.body.childNodes) {  
-//   alert(node);    // последовательный вывод детей body с помощью for of
-// }
-
-
-// let i = Array.from( document.body.childNodes);
-// console.log(i) // вывод детей body в виде массива в консоль
-
-
-for (let node of document.body.children) {
-  alert(node);                               // последовательный вывод детей - элементов body (без текстовых узлов)
-}
-
-  </script>
-  ...какой-то HTML-код...
+  <button id="button1">отправить</button>
+  <input type="text" id="input1" autofocus minlength="10" maxlength="30" placeholder="введите майл">
+  <input type="text" id="input2" autofocus minlength="10" maxlength="30" placeholder="введите номер телефона">
+  <button id="button2">поменять</button>
+  <div>
+  <button id="button3">заблокировать майл</button>
+  <button id="button4">разблокировать майл</button>
+  </div>
+  <br>
+  <div id="square1" ></div>
+  <br>
+  <div id="square2" ></div>
+  <br>
+  <div id="sqrAll">
+    <div class="sqr" id="1"></div>
+    <div class="sqr" id="2"></div>
+    <div class="sqr" id="3"></div>
+    <div class="sqr" id="4"></div>
+  </div>
+  <button id="button5">скрыть зеленый квадрат</button>
+  <br>
+ <script src="test.js"></script>
 </body>
 </html>
