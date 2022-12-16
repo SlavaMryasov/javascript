@@ -381,6 +381,110 @@ let sqr = document.querySelector('#sqrAll').children
     })
   }
 
+ 
+  
+let inpResult = document.querySelector('#inpResult');
+let inp = document.querySelector('#oper');
+
+let figure = document.querySelectorAll('.num');
+let operator = document.querySelectorAll('.operator');
+let plus = document.getElementById('Addition')
+let equal = document.getElementById('Equality')
+let clear = document.getElementById('clear')
+
+let str = '';
+let arr= [];
+let aa = 0;
+let a = 0
+let b = 0
+
+for(let i = 0; i < figure.length; i++){     
+  figure[i].addEventListener('click', ()=>{ 
+    str = str + figure[i].textContent       
+    inp.value = str                         
+
+  })
+}
+
+equal.addEventListener('click', ()=>{      
+  if(str.includes('+')){
+    arr = str.split('+')                   
+    console.log(arr) 
+    for(let j = 0; j< arr.length; j++){     
+      function fn(a, b){               
+      a = Number(arr[j]) 
+      b = Number(arr[j++]) 
+      aa = a+b
+    }
+  }
+  }     
+  if(str.includes('-')){
+    arr = str.split('-') 
+    for(let j = 0; j< arr.length; j++){     
+      function fn(a, b){                       
+      a = Number(arr[0])
+      b = Number(arr[1])
+      aa = a - b 
+      bb = a - b 
+    }
+  }
+  }    
+  if(str.includes('*')){
+    arr = str.split('*') 
+    for(let j = 0; j< arr.length; j++){     
+      function fn(a, b){                       
+      a = Number(arr[0])
+      b = Number(arr[1])
+      aa = a * b 
+      bb = a * b
+    }
+  }
+  } 
+  if(str.includes('/')){
+    arr = str.split('/') 
+    for(let j = 0; j< arr.length; j++){     
+      function fn(a, b){                       
+      a = Number(arr[0])
+      b = Number(arr[1])
+      aa = a / b
+      bb = a / b 
+    }
+  }
+  } 
+  fn()      
+  inp.value = aa                                              
+  })
+  clear.addEventListener('click', ()=>{
+    inp.value = ''
+    aa = 0
+  })
+
+
+
+
+
+// for(let i = 0; i < figure.length; i++){
+//   figure[i].addEventListener('click', ()=>{
+//     str = str + figure[i].textContent
+//     inpMathOperation.value = str
+//     arr = str.split(' ')
+//     //console.log(arr)
+//     let ev = eval(str)
+//     inpResult.value = ev
+    
+//   })
+  
+  
+// }
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,0 +1,109 @@
+#inputResult {}
+
+#inpMathOperation {}
+
+#square1 {
+  width: 150px;
+  height: 150px;
+  outline: 1px solid black;
+  background: green;
+}
+
+#square2 {
+  width: 150px;
+  height: 150px;
+  outline: 1px solid black;
+  background: red;
+}
+
+#button5 {
+  position: absolute;
+  left: 200px;
+  top: 100px;
+}
+
+.sqr {
+  width: 50px;
+  height: 50px;
+  outline: 1px solid black;
+  background: red;
+  display: inline-block;
+}
+
+.calc {
+  position: absolute;
+  width: 212px;
+  height: 335px;
+  left: 50%;
+  background-color: grey;
+  border: 8px solid grey;
+  border-radius: 5px;
+}
+
+.num {
+  height: 50px;
+  width: 50px;
+}
+
+.operator {
+  height: 50px;
+  width: 50px;
+}
+
+.but {
+  display: flex;
+  padding-bottom: 2px;
+  height: 255px;
+}
+
+.figures {
+  width: 158px;
+  height: 255px;
+}
+
+.operators {
+  display: inline-block;
+  width: 50px;
+  margin-left: 4px;
+}
+
+#zero {
+  width: 104px;
+}
+
+.num {
+  background-color: #d3d4d8;
+}
+
+#Addition,
+#Subtraction,
+#Multiplication,
+#Division,
+#Equality {
+  background-color: #f97f10;
+}
+
+button {
+  border-radius: 5px;
+  margin-bottom: 4px;
+  font-size: 20px;
+}
+
+#oper {
+  background: none;
+  text-align: end;
+  color: beige;
+  border: none;
+  height: 40px;
+  width: 200px;
+  font-size: 40px;
+  padding-bottom: 5px;
+}
+
+#inpResult {
+  height: 20px;
+  width: 200px;
+  text-align: end;
+  background: none;
+  border: none;
+}

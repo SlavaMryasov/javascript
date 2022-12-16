@@ -6,52 +6,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <style>
-    #square1{
-      width: 150px;
-      height: 150px;
-      outline: 1px solid black;
-      background: green;
-    }
-    #square2{
-      width: 150px;
-      height: 150px;
-      outline: 1px solid black;
-      background: red;
-    }
-    #button5{
-      position: absolute;
-      left: 200px;
-      top: 100px
-    }
-    .sqr{
-      width: 50px;
-      height: 50px;
-      outline: 1px solid black;
-      background: red;
-      display: inline-block;
-    }
-  </style>
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
   <button id="button1">отправить</button>
-  <input type="text" id="input1" autofocus minlength="10" maxlength="30" placeholder="введите майл">
-  <input type="text" id="input2" autofocus minlength="10" maxlength="30" placeholder="введите номер телефона">
+  <input type="text" id="input1"  minlength="10" maxlength="30" placeholder="введите майл">
+  <input type="text" id="input2"  minlength="10" maxlength="30" placeholder="введите номер телефона">
   <button id="button2">поменять</button>
   <div>
   <button id="button3">заблокировать майл</button>
   <button id="button4">разблокировать майл</button>
   </div>
   <br>
-  <div id="square1" ></div>
+  <div id="square1"></div>
   <br>
-  <div id="square2" ></div>
+  <div id="square2"></div>
   <br>
   <div id="sqrAll">
     <div class="sqr" id="1"></div>
     <div class="sqr" id="2"></div>
     <div class="sqr" id="3"></div>
     <div class="sqr" id="4"></div>
+  </div>
+  <div class="calc">
+    <input type="text" id="inpResult" placeholder=" славкин калькулятор">
+    <input type="text" id="oper">
+    
+    <div class="but">
+      <div class="figures">
+        <button class="num" id="">x</button>
+        <button class="num" id="">x</button>
+        <button class="num" id="clear">c</button>
+        <button class="num" id="seven">7</button>
+        <button class="num" id="eight">8</button>
+        <button class="num" id="nine">9</button>
+        <button class="num" id="four">4</button>
+        <button class="num" id="five">5</button>
+        <button class="num" id="six">6</button>
+        <button class="num" id="one">1</button>
+        <button class="num" id="two">2</button>
+        <button class="num" id="three">3</button>
+        <button class="num" id="zero">0</button>
+        <button id="Dot" class="num">.</button>
+      </div>
+
+      <div class="operators">
+        <button id="Addition" class="num">+</button>
+        <button id="Subtraction" class="num">-</button>
+        <button id="Multiplication" class="num">*</button>
+        <button id="Division" class="num">/</button>
+        <button id="Equality" class="operator"> =</button>
+      </div>
+    </div>
   </div>
   <button id="button5">скрыть зеленый квадрат</button>
   <br>
