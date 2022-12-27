@@ -385,79 +385,181 @@ let sqr = document.querySelector('#sqrAll').children
   
 let inpResult = document.querySelector('#inpResult');
 let inp = document.querySelector('#oper');
-
 let figure = document.querySelectorAll('.num');
 let operator = document.querySelectorAll('.operator');
 let plus = document.getElementById('Addition')
 let equal = document.getElementById('Equality')
 let clear = document.getElementById('clear')
+let testBtn = document.getElementById('test')
 
 let str = '';
+let str2 = '';
 let arr= [];
-let aa = 0;
-let a = 0
-let b = 0
+let a = 0;
+let aa = 1;
+let op = '';
 
-for(let i = 0; i < figure.length; i++){     
-  figure[i].addEventListener('click', ()=>{ 
-    str = str + figure[i].textContent       
-    inp.value = str                         
-
+for(let i = 0; i < figure.length; i++){   
+  function fn(){
+    arr=[]
+    str = str + figure[i].textContent
+    str2 = str2 + figure[i].textContent
+    inp.value = str
+    for(let k = 0; k < str.length; k++){
+      if(str[k] === '+' || str[k] === '-'){
+        op = str[k]
+        arr = str.split(/[+,-]/)
+        console.log(arr)
+      }
+      if(str[k] === '*' || str[k] === '/'){
+        op = str[k]
+        arr = str.split(/[*,/]/)
+      }
+      if(str[k] === '√'){
+        op = str[k]
+        arr = str.split('√')
+      }
+      if(str[k] === 'x'){
+        op = str[k]
+        arr = str.split('x')
+      }
+    } 
+    console.log(arr)
+  }  
+  figure[i].addEventListener('click', ()=>{
+    return fn()
   })
 }
+equal.addEventListener('click', ()=>{
+  for(let j = 0; j< arr.length; j++){
+    if(op === '+'){
+      a = Number(arr[0]) + Number(arr[1])
+    }
+    if(op === '-'){
+      a = Number(arr[0])- Number(arr[1])
+    }
+    if(op === '*'){
+      a = Number(arr[0])* Number(arr[1])
+    }
+    if(op === '/'){
+      a = Number(arr[0])/ Number(arr[1])
+    }
+    if(op === '√'){
+      a = Math.sqrt(Number(arr[0]))
+    }
+    if(op === 'x'){
+      a = Number(arr[0]) * Number(arr[0])
+    }
+    
+  }
+  inpResult.value = str2
+  str = a
+  inp.value= a
+})
 
-equal.addEventListener('click', ()=>{      
-  if(str.includes('+')){
-    arr = str.split('+')                   
-    console.log(arr) 
-    for(let j = 0; j< arr.length; j++){     
-      function fn(a, b){               
-      a = Number(arr[j]) 
-      b = Number(arr[j++]) 
-      aa = a+b
-    }
-  }
-  }     
-  if(str.includes('-')){
-    arr = str.split('-') 
-    for(let j = 0; j< arr.length; j++){     
-      function fn(a, b){                       
-      a = Number(arr[0])
-      b = Number(arr[1])
-      aa = a - b 
-      bb = a - b 
-    }
-  }
-  }    
-  if(str.includes('*')){
-    arr = str.split('*') 
-    for(let j = 0; j< arr.length; j++){     
-      function fn(a, b){                       
-      a = Number(arr[0])
-      b = Number(arr[1])
-      aa = a * b 
-      bb = a * b
-    }
-  }
-  } 
-  if(str.includes('/')){
-    arr = str.split('/') 
-    for(let j = 0; j< arr.length; j++){     
-      function fn(a, b){                       
-      a = Number(arr[0])
-      b = Number(arr[1])
-      aa = a / b
-      bb = a / b 
-    }
-  }
-  } 
-  fn()      
-  inp.value = aa                                              
-  })
-  clear.addEventListener('click', ()=>{
-    inp.value = ''
-    aa = 0
-  })
+clear.addEventListener('click', ()=>{
+  str=''
+  str2=''
+  inp.value= ''
+  inpResult.value = ''
+  arr = []
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// for(let i = 0; i < figure.length; i++){   
+//   function fn(){
+//     str = str + figure[i].textContent
+//     inp.value = str 
+//     console.log('строка',str)
+//   }  
+//   figure[i].addEventListener('click', ()=>{
+//     return fn()
+//   })
+// }
+// for(let k = 0; k < operator.length; k++){
+// operator[k].addEventListener('click', ()=>{
+//   arr.unshift(+str)
+//   str = ''
+//   console.log('массив проход',arr)
+//   equal.addEventListener('click', ()=>{
+//     for(let j = 0; j < arr.length; j++){
+//       if(operator[k].textContent === '+'){
+//           aa = aa + arr[j]  
+//       }
+//       console.log('массив',arr) 
+//     }
+//     console.log('равно',aa)
+//     inp.value = aa
+//   })
+// })
+// }
+
+
+
+testBtn.addEventListener('click', ()=>{
+  console.log('равно test',aa)
+})
+
+// equal.addEventListener('click', ()=>{      
+//   if(str.includes('+')){
+//     arr = str.split('+')                   
+//     console.log(arr) 
+//     for(let j = 0; j< arr.length; j++){     
+//       function fn(a, b){               
+//       a = Number(arr[j]) 
+//       b = Number(arr[j++]) 
+//       aa = a+b
+//     }
+//   }
+//   }     
+//   if(str.includes('-')){
+//     arr = str.split('-') 
+//     for(let j = 0; j< arr.length; j++){     
+//       function fn(a, b){                       
+//       a = Number(arr[0])
+//       b = Number(arr[1])
+//       aa = a - b 
+//       bb = a - b 
+//     }
+//   }
+//   }    
+//   if(str.includes('*')){
+//     arr = str.split('*') 
+//     for(let j = 0; j< arr.length; j++){     
+//       function fn(a, b){                       
+//       a = Number(arr[0])
+//       b = Number(arr[1])
+//       aa = a * b 
+//       bb = a * b
+//     }
+//   }
+//   } 
+//   if(str.includes('/')){
+//     arr = str.split('/') 
+//     for(let j = 0; j< arr.length; j++){     
+//       function fn(a, b){                       
+//       a = Number(arr[0])
+//       b = Number(arr[1])
+//       aa = a / b
+//       bb = a / b 
+//     }
+//   }
+//   } 
+//   fn()      
+//   inp.value = aa                                              
+//   })
+ 
+  
 
 
 

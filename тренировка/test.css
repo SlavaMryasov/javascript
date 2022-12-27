@@ -40,12 +40,13 @@
   border-radius: 5px;
 }
 
-.num {
+.num,.clear {
+  background-color: #d3d4d8;
   height: 50px;
   width: 50px;
 }
 
-.operator {
+.operator, .equal {
   height: 50px;
   width: 50px;
 }
@@ -71,15 +72,15 @@
   width: 104px;
 }
 
-.num {
-  background-color: #d3d4d8;
-}
 
 #Addition,
 #Subtraction,
 #Multiplication,
 #Division,
-#Equality {
+#Equality,
+#clear,
+#degree,
+#root {
   background-color: #f97f10;
 }
 
